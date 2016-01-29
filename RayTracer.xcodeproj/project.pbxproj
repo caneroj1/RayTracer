@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2EB10D3F1C5AF323006D774D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB10D3E1C5AF323006D774D /* main.cpp */; };
+		2EB10D481C5AF358006D774D /* ppm_printer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB10D461C5AF358006D774D /* ppm_printer.cpp */; };
+		2EB10D4D1C5B072A006D774D /* ray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2EB10D4B1C5B072A006D774D /* ray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,11 @@
 /* Begin PBXFileReference section */
 		2EB10D3B1C5AF323006D774D /* RayTracer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = RayTracer; sourceTree = BUILT_PRODUCTS_DIR; };
 		2EB10D3E1C5AF323006D774D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		2EB10D461C5AF358006D774D /* ppm_printer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ppm_printer.cpp; sourceTree = "<group>"; };
+		2EB10D471C5AF358006D774D /* ppm_printer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ppm_printer.hpp; sourceTree = "<group>"; };
+		2EB10D4A1C5AFC70006D774D /* vec3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = vec3.h; sourceTree = "<group>"; };
+		2EB10D4B1C5B072A006D774D /* ray.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ray.cpp; sourceTree = "<group>"; };
+		2EB10D4C1C5B072A006D774D /* ray.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ray.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +64,30 @@
 		2EB10D3D1C5AF323006D774D /* RayTracer */ = {
 			isa = PBXGroup;
 			children = (
+				2EB10D451C5AF334006D774D /* src */,
 				2EB10D3E1C5AF323006D774D /* main.cpp */,
 			);
 			path = RayTracer;
+			sourceTree = "<group>";
+		};
+		2EB10D451C5AF334006D774D /* src */ = {
+			isa = PBXGroup;
+			children = (
+				2EB10D491C5AFC50006D774D /* types */,
+				2EB10D461C5AF358006D774D /* ppm_printer.cpp */,
+				2EB10D471C5AF358006D774D /* ppm_printer.hpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		2EB10D491C5AFC50006D774D /* types */ = {
+			isa = PBXGroup;
+			children = (
+				2EB10D4A1C5AFC70006D774D /* vec3.h */,
+				2EB10D4B1C5B072A006D774D /* ray.cpp */,
+				2EB10D4C1C5B072A006D774D /* ray.hpp */,
+			);
+			path = types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -118,6 +146,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2EB10D4D1C5B072A006D774D /* ray.cpp in Sources */,
+				2EB10D481C5AF358006D774D /* ppm_printer.cpp in Sources */,
 				2EB10D3F1C5AF323006D774D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +237,7 @@
 		2EB10D431C5AF323006D774D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "/Users/jcanero/Code/Repositories/c++/boost_1_59_0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -214,6 +245,7 @@
 		2EB10D441C5AF323006D774D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = "/Users/jcanero/Code/Repositories/c++/boost_1_59_0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
